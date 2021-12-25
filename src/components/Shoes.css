@@ -1,6 +1,6 @@
 .shoes-card {
   box-shadow: 0.3rem 0.3rem 1rem black;
-  width: 30vw;
+  width: max-content;
   margin: 1rem;
   display: flex;
   border-radius: 1rem;
