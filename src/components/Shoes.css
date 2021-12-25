@@ -1,0 +1,41 @@
+.shoes-card {
+  box-shadow: 0.3rem 0.3rem 1rem black;
+  width: 30vw;
+  margin: 1rem;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.image {
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 0.9rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.content > * {
+  padding: 0.4rem;
+  margin: 0.3rem;
+}
+
+.content > div {
+  background-color: teal;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  box-shadow: 0.3rem 0.3rem 1rem black;
+}
+
+.content > button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.788);
+  border: none;
+  border-radius: 0.4rem;
+}

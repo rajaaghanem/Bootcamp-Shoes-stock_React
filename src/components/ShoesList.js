@@ -1,5 +1,6 @@
 import React from 'react';
 import Shoes from './Shoes';
+import "./ShoesList.css";
 
 class ShoesList extends React.Component {
   state = { shoes: [] };
@@ -17,18 +18,18 @@ class ShoesList extends React.Component {
   }
 
   filterData = (arrOfData, userInput) => {
-    return arrOfData.filter((avatar) => {
-      return avatar.name.toLowerCase().includes(userInput.toLowerCase());
+    return arrOfData.filter((shoes) => {
+      return shoes.name.toLowerCase().includes(userInput.toLowerCase());
     });
   };
 
   mapping = () => {
     return this.state.shoes.map((e) => {
-      return <Shoes key={e.id} name={e.name} img={e.image} />;
+      return <Shoes key={e.id} name={e.name} img={e.image} price={e.price} />;
     });
   };
   render() {
-    return <div>{this.mapping()}</div>;
+    return <div className='shoeslist-container'>{this.mapping()}</div>;
   }
 }
 
