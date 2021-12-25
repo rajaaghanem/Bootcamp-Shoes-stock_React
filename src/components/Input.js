@@ -6,17 +6,17 @@ import axios from "axios";
 class Input extends React.Component {
   state = { name: "", img: "", price: "" };
 
-  handleName = (event) => {
-    this.setState({ name: event.target.value });
-  };
+  // handleName = (event) => {
+  //   this.setState({ name: event.target.value });
+  // };
 
-  handleImg = (event) => {
-    this.setState({ img: event.target.value });
-  };
+  // handleImg = (event) => {
+  //   this.setState({ img: event.target.value });
+  // };
 
-  handlePrice = (event) => {
-    this.setState({ price: event.target.value });
-  };
+  // handlePrice = (event) => {
+  //   this.setState({ price: event.target.value });
+  // };
 
   CreateShoes = async() => {
     const shoes = {
@@ -28,8 +28,7 @@ class Input extends React.Component {
       `https://61c7309d9031850017547339.mockapi.io/shoes`,
       shoes
     );
-    console.log(response);
-    return this.props.onCreate(response);
+    return this.props.onCreate(response.data);
   };
 
   render() {
@@ -43,7 +42,7 @@ class Input extends React.Component {
           />
         </div>
 
-        <div className="input-container">
+        {/* <div className="input-container">
           <label>Name:</label>
           <input onChange={this.handleName} value={this.state.name} />
           <label>Image URL:</label>
@@ -51,7 +50,7 @@ class Input extends React.Component {
           <label>Price:</label>
           <input onChange={this.handlePrice} value={this.state.price} />
           <button onClick={this.CreateShoes}>Add Shoes</button>
-        </div>
+        </div> */}
       </>
     );
   }

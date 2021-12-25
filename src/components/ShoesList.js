@@ -23,12 +23,19 @@ class ShoesList extends React.Component {
     });
   };
 
+  handleDelete=(id)=>{
+    return (this.props.onclick(id));
+  }
+
   mapping = () => {
     return this.state.shoes.map((e) => {
-      return <Shoes key={e.id} name={e.name} img={e.image} price={e.price} />;
+      return <Shoes key={e.id} name={e.name} img={e.image} price={e.price} id={e.id} onclick={this.handleDelete}/>;
     });
   };
+
+
   render() {
+    console.log("the list state", this.state.shoes);
     return <div className='shoeslist-container'>{this.mapping()}</div>;
   }
 }
