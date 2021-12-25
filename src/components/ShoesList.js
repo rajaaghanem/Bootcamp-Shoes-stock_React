@@ -29,12 +29,14 @@ class ShoesList extends React.Component {
 
   mapping = () => {
     return this.state.shoes.map((e) => {
-      return <Shoes key={e.id} name={e.name} img={e.image} price={e.price} id={e.id} onclick={this.handleDelete}/>;
+      return <Shoes key={e.id} name={e.name} img={e.image} price={e.price} id={e.id} onclick={this.handleDelete} updateitem={this.props.update}/>;
     });
   };
 
 
   render() {
+    // console.log("props list",this.props);
+
     return <div className='shoeslist-container'>{this.mapping()}</div>;
   }
 }

@@ -42,10 +42,11 @@ class Shoes extends React.Component {
       shoes
     );
     this.setState({isOn: false});
-
+    return this.props.updateitem(this.state.id, this.state.name, this.state.img, this.state.price);
   }
 
   addUpdate=()=>{
+    // console.log("props",this.props);
     return this.state.isOn?  <div className="input-container">
     <label>Name:</label>
         <input onChange={this.handleName} value={this.state.name} />

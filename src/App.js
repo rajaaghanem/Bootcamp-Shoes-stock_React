@@ -60,7 +60,24 @@ export default class App extends Component {
     this.setState({ data: filteredList });
   };
 
+  handleUpdate=(id,newName, newImg,newPrice)=>{
+    const data = [...this.state.data];
+    const shoes = data.find((shoes) => shoes.id === id);
+    const editedshoes = {
+      ...shoes,
+      name: newName,
+      image: newImg,
+      price: newPrice
+    };
+    this.setState({
+      data: this.state.data.map((shoes) => {
+        return shoes.id === id ? editedshoes : shoes;
+      }),
+    });
+  }
+
   render() {
+    console.log(this.state.data);
     return (
       <>
         <div className="app-container">
@@ -82,6 +99,7 @@ export default class App extends Component {
             shoes={this.state.data}
             userValue={this.state.value}
             onclick={this.handleDeleteMain}
+            update = {this.handleUpdate}
           />
         </div>
       </>
