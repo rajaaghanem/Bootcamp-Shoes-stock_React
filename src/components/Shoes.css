@@ -4,6 +4,7 @@
   margin: 1rem;
   display: flex;
   border-radius: 1rem;
+  height: 35vh;
 }
 
 .image {
@@ -38,4 +39,49 @@
   background-color: rgba(0, 0, 0, 0.788);
   border: none;
   border-radius: 0.4rem;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 20vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(131, 187, 187);
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.input-container > input {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid black;
+}
+
+.input-container > button {
+  width: max-content;
+  text-align: center;
+  border-radius: 0.1rem;
+  border: none;
+  box-shadow: 0.3rem 0.3rem 1rem black;
+  background-color: rgb(45, 82, 83);
+  border-radius: 0.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.input-container > label {
+  color: white;
+  background-color: rgb(45, 82, 83);
+  width: max-content;
+  padding: 0.2rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+}
+
+.container-cards {
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  /* justify-content: space-around; */
 }
