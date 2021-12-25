@@ -17,9 +17,6 @@ export default class App extends Component {
     const res = await axios.get(
       "https://61c7309d9031850017547339.mockapi.io/shoes"
     );
-
-    console.log("axios", res);
-
     this.setState({ data: res.data, originalData: res.data });
   };
 
@@ -39,7 +36,6 @@ export default class App extends Component {
       `https://61c7309d9031850017547339.mockapi.io/shoes`,
       shoes
     );
-    console.log("added",response.data);
     this.setState((state) => {
           return { data: [...state.data, response.data]};
         });
@@ -65,7 +61,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log("the state", this.state.data);
     return (
       <>
         <div className="app-container">

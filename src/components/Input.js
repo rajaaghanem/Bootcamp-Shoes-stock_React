@@ -6,17 +6,6 @@ import axios from "axios";
 class Input extends React.Component {
   state = { name: "", img: "", price: "" };
 
-  // handleName = (event) => {
-  //   this.setState({ name: event.target.value });
-  // };
-
-  // handleImg = (event) => {
-  //   this.setState({ img: event.target.value });
-  // };
-
-  // handlePrice = (event) => {
-  //   this.setState({ price: event.target.value });
-  // };
 
   CreateShoes = async() => {
     const shoes = {
@@ -41,16 +30,6 @@ class Input extends React.Component {
             value={this.props.userValue}
           />
         </div>
-
-        {/* <div className="input-container">
-          <label>Name:</label>
-          <input onChange={this.handleName} value={this.state.name} />
-          <label>Image URL:</label>
-          <input onChange={this.handleImg} value={this.state.img} />
-          <label>Price:</label>
-          <input onChange={this.handlePrice} value={this.state.price} />
-          <button onClick={this.CreateShoes}>Add Shoes</button>
-        </div> */}
       </>
     );
   }
