@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import AvatarList from './components/AvatarList';
+import ShoesList from './components/ShoesList';
 import Input from './components/Input';
 
 export default class App extends Component {
@@ -30,7 +30,7 @@ export default class App extends Component {
     return (
       <div>
         <Input handleInput={this.handleInput} userValue={this.state.value} />
-        <AvatarList shoes={this.state.data} userValue={this.state.value} />
+        <ShoesList shoes={this.state.data} userValue={this.state.value} />
       </div>
     );
   }

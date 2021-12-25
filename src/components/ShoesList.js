@@ -1,7 +1,7 @@
 import React from 'react';
-import Avatar from './Avatar';
+import Shoes from './Shoes';
 
-class AvatarList extends React.Component {
+class ShoesList extends React.Component {
   state = { shoes: [] };
 
   componentDidUpdate(prevProps) {
@@ -24,7 +24,7 @@ class AvatarList extends React.Component {
 
   mapping = () => {
     return this.state.shoes.map((e) => {
-      return <Avatar key={e.id} name={e.name} img={e.image} />;
+      return <Shoes key={e.id} name={e.name} img={e.image} />;
     });
   };
   render() {
@@ -32,4 +32,4 @@ class AvatarList extends React.Component {
   }
 }
 
-export default AvatarList;
+export default ShoesList;
