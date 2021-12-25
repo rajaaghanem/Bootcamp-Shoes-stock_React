@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import axios from 'axios';
+import AvatarList from './components/AvatarList';
+import Input from './components/Input';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = { data: [], value: '' };
+
+  async componentDidMount() {
+    //spinner on
+    await this.getData();
+    //spinner off
+  }
+
+  getData = async () => {
+    const res = await axios.get('https://61c7309d9031850017547339.mockapi.io/shoes');
+
+    console.log("axios",res);
+
+    this.setState({ data: res.data, originalData: res.data });
+  };
+
+  handleInput = ({ target: { value } }) => {
+    this.setState({
+      value: value,
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Input handleInput={this.handleInput} userValue={this.state.value} />
+        <AvatarList shoes={this.state.data} userValue={this.state.value} />
+      </div>
+    );
+  }
 }
-
-export default App;
