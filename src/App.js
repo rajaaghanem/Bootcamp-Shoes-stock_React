@@ -26,10 +26,18 @@ export default class App extends Component {
     });
   };
 
+  createShoe=(addedItem)=>{
+    this.setState((state)=>{
+      return ({data:[...state.data],addedItem})
+    })
+    console.log(addedItem.data);
+  }
+
   render() {
+    console.log(this.state.data);
     return (
       <div className='app-container'> 
-        <Input handleInput={this.handleInput} userValue={this.state.value} />
+        <Input handleInput={this.handleInput} userValue={this.state.value} onCreate={this.createShoe}/>
         <ShoesList shoes={this.state.data} userValue={this.state.value} />
       </div>
     );
