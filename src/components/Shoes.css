@@ -44,7 +44,7 @@
 .input-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  width: 20vw;
+  width: 30vw;
   justify-content: center;
   align-items: center;
   background-color: rgb(131, 187, 187);
@@ -77,11 +77,4 @@
   padding: 0.2rem;
   font-weight: bold;
   border-radius: 0.4rem;
-}
-
-.container-cards {
-  margin: 0;
-  padding: 0;
-  width: 80vw;
-  /* justify-content: space-around; */
 }
