@@ -35,7 +35,6 @@ class ShoesList extends React.Component {
 
 
   render() {
-    // console.log("props list",this.props);
 
     return <div className='shoeslist-container'>{this.mapping()}</div>;
   }

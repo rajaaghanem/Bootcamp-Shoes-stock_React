@@ -40,7 +40,7 @@ class Shoes extends React.Component {
     const shoes = {
       name: this.state.name,
       image: this.state.img,
-      price: this.props.price,
+      price: this.state.price,
     };
 
     await axios.put(
