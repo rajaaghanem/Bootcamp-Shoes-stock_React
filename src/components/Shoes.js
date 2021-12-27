@@ -74,10 +74,10 @@ class Shoes extends React.Component {
     return (
       <div className="container-cards">
         <div className="shoes-card">
-          <img src={this.state.img} alt="Shoes" className="image" />
+          <img src={this.props.img} alt="Shoes" className="image" />
           <div className="content">
-            <div className="name">{this.state.name}</div>
-            <div className="name">{this.state.price}</div>
+            <div className="name">{this.props.name}</div>
+            <div className="name">{this.props.price}</div>
             <button onClick={this.handleUpdate}>Update Item</button>
             <button onClick={this.handleDelete}>Delete Item</button>
           </div>
